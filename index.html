@@ -1,16 +1,213 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Web App</title>
-  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Sinchal Somaiah C — Portfolio</title>
+  <meta name="description" content="Portfolio — Sinchal Somaiah C, B.Tech CSE student. Projects: Library Management System, Gold Price Prediction, Integrated Healthcare Portal." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* small decorative animations */
+    .float-y { animation: floatY 6s ease-in-out infinite; }
+    @keyframes floatY {
+      0%,100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+  </style>
 </head>
-<body class="bg-gradient-to-r from-blue-500 to-purple-600 min-h-screen flex items-center justify-center">
-  <div class="text-center text-white">
-    <h1 class="text-5xl font-bold mb-6">Welcome to My App 🚀</h1>
-    <p class="text-xl">Let's build something amazing together.</p>
-    <button class="mt-8 px-6 py-3 bg-white text-blue-600 rounded-full font-semibold hover:bg-gray-200 transition">Get Started</button>
-  </div>
+<body class="bg-gradient-to-br from-slate-900 via-indigo-900 to-slate-800 text-slate-100 antialiased">
+
+  <!-- NAV -->
+  <header class="max-w-6xl mx-auto p-6 flex items-center justify-between">
+    <a href="#hero" class="flex items-center gap-3">
+      <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center text-xl font-bold text-white">SS</div>
+      <div class="hidden sm:block">
+        <div class="text-lg font-semibold">Sinchal Somaiah C</div>
+        <div class="text-sm text-slate-300">Computer Science Engineering • Reva University</div>
+      </div>
+    </a>
+    <nav class="space-x-4">
+      <a href="#projects" class="text-sm hover:underline">Projects</a>
+      <a href="#skills" class="text-sm hover:underline">Skills</a>
+      <a href="#education" class="text-sm hover:underline">Education</a>
+      <a href="#contact" class="text-sm hover:underline">Contact</a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="hero" class="max-w-6xl mx-auto px-6 py-12 grid md:grid-cols-2 gap-10 items-center">
+    <div>
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight">
+        Hi, I’m <span class="text-indigo-400">Sinchal</span> — a Computer Science student building practical apps.
+      </h1>
+      <p class="mt-6 text-slate-300 max-w-xl">
+        Enthusiastic and driven CSE student with hands-on experience in Java, Python, machine learning, and full-stack development.
+        I build tools that solve real problems — from a Library Management System to an Integrated Healthcare Portal.
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-3">
+        <a href="#projects" class="inline-flex items-center gap-2 bg-indigo-500 hover:bg-indigo-600 text-white px-4 py-2 rounded-full shadow">View Projects</a>
+        <a href="#contact" class="inline-flex items-center gap-2 border border-slate-600 px-4 py-2 rounded-full text-slate-200 hover:bg-white/5">Contact Me</a>
+        <!-- If you've uploaded the Resume PDF to your repo, set this href to the PDF file path -->
+        <a href="Sinchal_Resume.pdf" class="inline-flex items-center gap-2 text-slate-900 bg-amber-300 px-4 py-2 rounded-full hover:opacity-90" download>Download Resume</a>
+      </div>
+
+      <ul class="mt-8 grid grid-cols-2 sm:grid-cols-3 gap-4 text-sm text-slate-300">
+        <li><strong class="text-slate-100">Email:</strong> sinchalsomaiah6421@gmail.com</li>
+        <li><strong class="text-slate-100">Phone:</strong> 9902265977</li>
+        <li><strong class="text-slate-100">Location:</strong> Bangalore, India</li>
+      </ul>
+    </div>
+
+    <div class="relative hidden md:block">
+      <div class="rounded-2xl bg-white/5 p-6 shadow-xl float-y">
+        <div class="text-left">
+          <div class="text-slate-300 text-sm mb-2">Quick summary</div>
+          <h3 class="text-2xl font-semibold">About Me</h3>
+          <p class="mt-3 text-slate-300">
+            Problem-solver & lifelong learner. Interested in software development, ML, and cloud technologies. Experienced with Java, Python, and web stacks.
+          </p>
+          <div class="mt-4 text-sm text-slate-400">
+            <div><strong>University:</strong> Reva University</div>
+            <div><strong>CGPA:</strong> 8.29</div>
+            <div class="mt-3"><strong>Courses:</strong> Azure AI Fundamentals, Azure Fundamentals, NASSCom Digital Engineering</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="max-w-6xl mx-auto px-6 py-10">
+    <h2 class="text-2xl font-bold mb-6">Projects</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <article class="bg-white/5 p-5 rounded-xl">
+        <h3 class="text-lg font-semibold">Integrated Healthcare Portal</h3>
+        <p class="mt-2 text-slate-300 text-sm">
+          A platform connecting hospitals, medical shops, labs, administrators and patients with role-based access. Includes real-time ambulance requests and streamlined service coordination.
+        </p>
+        <p class="mt-3 text-xs text-slate-400">Tech: HTML, JS, Server-side logic (role-based)</p>
+      </article>
+
+      <article class="bg-white/5 p-5 rounded-xl">
+        <h3 class="text-lg font-semibold">Library Management System</h3>
+        <p class="mt-2 text-slate-300 text-sm">
+          Java + MySQL application to manage books, borrowers, and transactions with multi-criteria search and check-in/check-out features.
+        </p>
+        <p class="mt-3 text-xs text-slate-400">Tech: Java, NetBeans, MySQL</p>
+      </article>
+
+      <article class="bg-white/5 p-5 rounded-xl">
+        <h3 class="text-lg font-semibold">Gold Price Prediction</h3>
+        <p class="mt-2 text-slate-300 text-sm">
+          Built prediction models using Linear Regression & Gradient Boosting. Analysed economic indicators to produce short & long-term forecasts.
+        </p>
+        <p class="mt-3 text-xs text-slate-400">Tech: Python, scikit-learn</p>
+      </article>
+
+      <article class="bg-white/5 p-5 rounded-xl">
+        <h3 class="text-lg font-semibold">Language Translation (EN–ES)</h3>
+        <p class="mt-2 text-slate-300 text-sm">
+          Implemented a translation approach using word embeddings and IBM Model 1 to explore translation quality improvements.
+        </p>
+        <p class="mt-3 text-xs text-slate-400">Tech: NLP, embeddings</p>
+      </article>
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="max-w-6xl mx-auto px-6 py-10">
+    <h2 class="text-2xl font-bold mb-6">Skills & Tools</h2>
+    <div class="grid md:grid-cols-2 gap-6">
+      <div class="bg-white/5 p-6 rounded-xl">
+        <h4 class="font-semibold mb-3">Languages</h4>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-indigo-600/30 rounded text-sm">C++</span>
+          <span class="px-3 py-1 bg-indigo-600/30 rounded text-sm">C</span>
+          <span class="px-3 py-1 bg-indigo-600/30 rounded text-sm">Java</span>
+          <span class="px-3 py-1 bg-indigo-600/30 rounded text-sm">Python</span>
+          <span class="px-3 py-1 bg-indigo-600/30 rounded text-sm">HTML</span>
+          <span class="px-3 py-1 bg-indigo-600/30 rounded text-sm">JavaScript</span>
+          <span class="px-3 py-1 bg-indigo-600/30 rounded text-sm">PHP</span>
+          <span class="px-3 py-1 bg-indigo-600/30 rounded text-sm">SQL</span>
+        </div>
+      </div>
+
+      <div class="bg-white/5 p-6 rounded-xl">
+        <h4 class="font-semibold mb-3">Cloud / Tools</h4>
+        <div class="flex flex-wrap gap-2">
+          <span class="px-3 py-1 bg-emerald-600/30 rounded text-sm">Azure</span>
+          <span class="px-3 py-1 bg-emerald-600/30 rounded text-sm">Git / GitHub</span>
+          <span class="px-3 py-1 bg-emerald-600/30 rounded text-sm">MySQL</span>
+          <span class="px-3 py-1 bg-emerald-600/30 rounded text-sm">scikit-learn</span>
+          <span class="px-3 py-1 bg-emerald-600/30 rounded text-sm">NetBeans</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- EDUCATION -->
+  <section id="education" class="max-w-6xl mx-auto px-6 py-10">
+    <h2 class="text-2xl font-bold mb-6">Education</h2>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="bg-white/5 p-5 rounded-xl">
+        <h4 class="font-semibold">B.Tech — Computer Science & Engineering</h4>
+        <p class="mt-2 text-slate-300">Reva University, Bangalore (2021–2025)</p>
+        <p class="mt-1 text-xs text-slate-400">Aggregate: 8.29 CGPA</p>
+      </div>
+
+      <div class="bg-white/5 p-5 rounded-xl">
+        <h4 class="font-semibold">Class 12</h4>
+        <p class="mt-2 text-slate-300">Deeksha at Sri Venkateshwara PU College</p>
+        <p class="mt-1 text-xs text-slate-400">Score: 92%</p>
+      </div>
+
+      <div class="bg-white/5 p-5 rounded-xl">
+        <h4 class="font-semibold">Class 10</h4>
+        <p class="mt-2 text-slate-300">Coorg Public School</p>
+        <p class="mt-1 text-xs text-slate-400">Score: 88%</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="max-w-4xl mx-auto px-6 py-12">
+    <div class="bg-white/5 p-8 rounded-xl grid md:grid-cols-2 gap-6 items-center">
+      <div>
+        <h3 class="text-2xl font-bold">Let's build something</h3>
+        <p class="mt-3 text-slate-300">Email me at <a href="mailto:sinchalsomaiah6421@gmail.com" class="text-indigo-300 underline">sinchalsomaiah6421@gmail.com</a> or call <strong>9902265977</strong>.</p>
+
+        <div class="mt-6">
+          <a href="https://github.com/Sinchal" class="inline-block text-sm mr-3 px-4 py-2 bg-slate-700 rounded hover:bg-slate-600">GitHub</a>
+          <a href="#" class="inline-block text-sm px-4 py-2 bg-slate-700 rounded hover:bg-slate-600">LinkedIn</a>
+        </div>
+      </div>
+
+      <form class="space-y-3" onsubmit="event.preventDefault(); alert('Thanks — message sent (demo)');">
+        <input class="w-full p-3 rounded bg-white/5 border border-white/5" placeholder="Your name" required>
+        <input class="w-full p-3 rounded bg-white/5 border border-white/5" placeholder="Email" required>
+        <textarea class="w-full p-3 rounded bg-white/5 border border-white/5" rows="4" placeholder="Message" required></textarea>
+        <button class="px-4 py-2 bg-indigo-500 rounded text-white hover:bg-indigo-600">Send message</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="max-w-6xl mx-auto px-6 py-8 text-sm text-slate-400">
+    <div class="flex flex-col md:flex-row justify-between items-center">
+      <div>© <strong>Sinchal Somaiah C</strong> — Built with ❤️ & Azure</div>
+      <div class="mt-3 md:mt-0">Made for portfolio / class assignment</div>
+    </div>
+  </footer>
+
+  <!-- small script to smooth-scroll -->
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(a=>{
+      a.addEventListener('click', e=>{
+        const t = document.querySelector(a.getAttribute('href'));
+        if (t) { e.preventDefault(); t.scrollIntoView({behavior:'smooth'}); }
+      });
+    });
+  </script>
 </body>
 </html>
