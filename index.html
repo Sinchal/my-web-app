@@ -59,22 +59,38 @@
       </ul>
     </div>
 
-    <div class="relative hidden md:block">
-      <div class="rounded-2xl bg-white/5 p-6 shadow-xl float-y">
-        <div class="text-left">
-          <div class="text-slate-300 text-sm mb-2">Quick summary</div>
-          <h3 class="text-2xl font-semibold">About Me</h3>
-          <p class="mt-3 text-slate-300">
-            Problem-solver & lifelong learner. Interested in software development, ML, and cloud technologies. Experienced with Java, Python, and web stacks.
-          </p>
-          <div class="mt-4 text-sm text-slate-400">
-            <div><strong>University:</strong> Reva University</div>
-            <div><strong>CGPA:</strong> 8.29</div>
-            <div class="mt-3"><strong>Courses:</strong> Azure AI Fundamentals, Azure Fundamentals, NASSCom Digital Engineering</div>
-          </div>
-        </div>
-      </div>
+   <div class="relative overflow-hidden rounded-2xl p-6 bg-white/10 backdrop-blur-xl border border-white/10 shadow-xl">
+
+  <!-- Background image overlay (SOFT BLUR) -->
+  <div 
+    class="absolute inset-0 bg-cover bg-center opacity-40 blur-[3px]"
+    style="background-image: url('https://github.com/Sinchal/my-web-app/blob/main/my%20pic.jpg');">
+  </div>
+
+  <!-- Dark gradient overlay for readability -->
+  <div class="absolute inset-0 bg-gradient-to-b from-black/40 to-black/60"></div>
+
+  <!-- Actual About Me content -->
+  <div class="relative z-10 text-white">
+    <h3 class="text-lg font-semibold mb-1">Quick summary</h3>
+    <h4 class="text-2xl font-bold mb-4">About Me</h4>
+
+    <p class="text-sm leading-relaxed mb-4">
+      Enthusiastic and driven CSE student with hands-on experience in Java,
+      Python, machine learning, backend development, and cloud technologies.
+      I build tools that solve real problems — from a Library Management System
+      to an Integrated Healthcare Portal.
+    </p>
+
+    <div class="space-y-1 text-white/80 text-sm">
+      <p><strong class="text-white">University:</strong> Reva University</p>
+      <p><strong class="text-white">CGPA:</strong> 8.29</p>
+      <p><strong class="text-white">Courses:</strong> Azure AI Fundamentals, Azure Fundamentals, NASSCOM Digital Engineering</p>
     </div>
+  </div>
+
+</div>
+
   </section>
 
   <!-- PROJECTS -->
@@ -242,6 +258,7 @@
   </script>
 </body>
 </html>
+
 
 
 
