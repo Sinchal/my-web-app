@@ -183,12 +183,20 @@
         </div>
       </div>
 
-      <form class="space-y-3" onsubmit="event.preventDefault(); alert('Thanks — message sent (demo)');">
-        <input class="w-full p-3 rounded bg-white/5 border border-white/5" placeholder="Your name" required>
-        <input class="w-full p-3 rounded bg-white/5 border border-white/5" placeholder="Email" required>
-        <textarea class="w-full p-3 rounded bg-white/5 border border-white/5" rows="4" placeholder="Message" required></textarea>
-        <button class="px-4 py-2 bg-indigo-500 rounded text-white hover:bg-indigo-600">Send message</button>
-      </form>
+      <form action="https://formsubmit.co/sinchalsomaiah6421@gmail.com" method="POST" class="space-y-3">
+  
+  <!-- FormSubmit settings -->
+  <input type="hidden" name="_subject" value="New Portfolio Message!">
+  <input type="hidden" name="_captcha" value="false">
+  <input type="hidden" name="_template" value="table">
+
+  <input name="name" class="w-full p-3 rounded bg-white/5 border border-white/5" placeholder="Your name" required>
+  <input name="email" class="w-full p-3 rounded bg-white/5 border border-white/5" placeholder="Email" type="email" required>
+  <textarea name="message" class="w-full p-3 rounded bg-white/5 border border-white/5" rows="4" placeholder="Message" required></textarea>
+
+  <button class="px-4 py-2 bg-indigo-500 rounded text-white hover:bg-indigo-600">Send message</button>
+</form>
+
     </div>
   </section>
 
@@ -211,6 +219,7 @@
   </script>
 </body>
 </html>
+
 
 
 
